@@ -17,9 +17,9 @@ crit_damage = 0
 
 # --- Враги, журнал и золото -----------------------
 enemies = ["скелет", "гуль", "паук", "летучая мышь", "соляной голем"]
-log = []           # таблица раундов
-gold_total = 0     # накопленное золото
-ability_bonus = 0  # надбавка к урону от эликсиров
+log = []           
+gold_total = 0     
+ability_bonus = 0  
 
 
 # ==================================================
@@ -54,7 +54,7 @@ def fight(enemy, hero_health, bonus=0):
     while enemy_hp > 0 and hero_health > 0:
         round_n += 1
         hit, crit = hero_hit(round_n)
-        hit = hit + bonus          # надбавка добавляется после крита
+        hit = hit + bonus          #
         enemy_hp -= hit
 
         line = f"Раунд {round_n}: вы наносите {hit:.1f} урона"
